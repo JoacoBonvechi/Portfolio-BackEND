@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("experiencia")//localhost:8080/experiencia
-@CrossOrigin(origins={"https://portfoliomanuacosta.web.app","http://localhost:4200"})//direccion del front de angular
+@CrossOrigin(origins={"https://portfolio-joaquin-b6373.web.app/portfolio","http://localhost:4200"})//direccion del front de angular
 public class ExperienciaControlador {
    
      @Autowired
