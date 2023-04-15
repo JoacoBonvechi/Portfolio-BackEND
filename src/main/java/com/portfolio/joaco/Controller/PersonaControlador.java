@@ -22,7 +22,7 @@ import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("/persona")//localhost:8080/experiencia
-@CrossOrigin(origins="https://portfolio-joaquin-b6373.web.app/portfolio")
+@CrossOrigin(origins="https://portfolio-joaquin-b6373.firebaseapp.com/portfolio")
 public class PersonaControlador {
     @Autowired ImpPersonaService  IPersonaService;
     
