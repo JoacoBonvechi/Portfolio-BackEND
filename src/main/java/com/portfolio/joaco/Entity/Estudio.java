@@ -29,6 +29,8 @@ public class Estudio {
     private Date inicio;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date fin; 
+    @NotNull
+    private String porcentaje;
     
      //relacion
     @ManyToOne
@@ -43,10 +45,11 @@ public class Estudio {
     public Estudio() {
     }
 
-    public Estudio(String estudio, Date inicio, Date fin, Persona persona) {
+    public Estudio(String estudio, Date inicio, Date fin, String porcentaje, Persona persona) {
         this.estudio = estudio;
         this.inicio = inicio;
         this.fin = fin;
+        this.porcentaje = porcentaje;
         this.persona = persona;
     }
 
@@ -85,6 +88,14 @@ public class Estudio {
     @JsonBackReference
     public Persona getPersona() {
         return persona;
+    }
+
+    public String getPorcentaje() {
+        return porcentaje;
+    }
+
+    public void setPorcentaje(String porcentaje) {
+        this.porcentaje = porcentaje;
     }
 
     public void setPersona(Persona persona) {
