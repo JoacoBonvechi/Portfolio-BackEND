@@ -43,7 +43,7 @@ public class Estudio {
     public Estudio() {
     }
 
-    public Estudio(String estudio, Date inicio, Date fin, String descripcion, String imagen, String url, String institucion, Persona persona) {
+    public Estudio(String estudio, Date inicio, Date fin, Persona persona) {
         this.estudio = estudio;
         this.inicio = inicio;
         this.fin = fin;

@@ -44,8 +44,8 @@ public class EstudioService {
         return rEstudio.existsById(id);
     }
     
-    public boolean existByNombreE(String nombreE){
-        return rEstudio.existByNombreE(nombreE);
+    public boolean existByNombreE(String estu){
+        return rEstudio.existByNombreE(estu);
     }
     
     public Optional<Estudio> getByNombre(String nombre){
