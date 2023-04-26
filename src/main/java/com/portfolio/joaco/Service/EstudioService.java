@@ -44,13 +44,6 @@ public class EstudioService {
         return rEstudio.existsById(id);
     }
     
-    public boolean existByNombreE(String estu){
-        return rEstudio.existByNombreE(estu);
-    }
-    
-    public Optional<Estudio> getByNombre(String nombre){
-        return rEstudio.findByNombreE(nombre);
-    }
      //busca lista de relojes por la id de la persona
     public List<Estudio> findByPersonaId(Long personaId) {
         return rEstudio.findByPersonaId(personaId);

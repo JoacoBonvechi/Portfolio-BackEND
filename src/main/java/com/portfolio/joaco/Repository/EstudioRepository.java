@@ -16,7 +16,5 @@ public interface EstudioRepository extends JpaRepository<Estudio, Integer> {
     
     List<Estudio> findByPersonaId(Long personaId);
     
-    public boolean existByNombreE(String nombreE);
-    public Optional<Estudio> findByNombreE(String nombreE);
 }
 
