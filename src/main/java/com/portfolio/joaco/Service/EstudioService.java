@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -7,6 +7,7 @@ package com.portfolio.joaco.Service;
 import com.portfolio.joaco.Entity.Estudio;
 import com.portfolio.joaco.Repository.EstudioRepository;
 import java.util.List;
+import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,6 +40,17 @@ public class EstudioService {
         rEstudio.save(estu);
     }
     
+    public boolean existById(int id){
+        return rEstudio.existsById(id);
+    }
+    
+    public boolean existByNombreE(String nombreE){
+        return rEstudio.existByNombreE(nombreE);
+    }
+    
+    public Optional<Estudio> getByNombre(String nombre){
+        return rEstudio.findByNombreE(nombre);
+    }
      //busca lista de relojes por la id de la persona
     public List<Estudio> findByPersonaId(Long personaId) {
         return rEstudio.findByPersonaId(personaId);
