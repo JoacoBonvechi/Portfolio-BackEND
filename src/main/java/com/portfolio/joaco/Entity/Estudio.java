@@ -25,10 +25,6 @@ public class Estudio {
     private int id;
     @NotNull
     private String estudio;
-    @Temporal(javax.persistence.TemporalType.DATE)
-    private Date inicio;
-    @Temporal(javax.persistence.TemporalType.DATE)
-    private Date fin; 
     @NotNull
     private String porcentaje;
     
@@ -45,10 +41,8 @@ public class Estudio {
     public Estudio() {
     }
 
-    public Estudio(String estudio, Date inicio, Date fin, String porcentaje, Persona persona) {
+    public Estudio(String estudio, String porcentaje, Persona persona) {
         this.estudio = estudio;
-        this.inicio = inicio;
-        this.fin = fin;
         this.porcentaje = porcentaje;
         this.persona = persona;
     }
@@ -67,22 +61,6 @@ public class Estudio {
 
     public void setEstudio(String estudio) {
         this.estudio = estudio;
-    }
-
-    public Date getInicio() {
-        return inicio;
-    }
-
-    public void setInicio(Date inicio) {
-        this.inicio = inicio;
-    }
-
-    public Date getFin() {
-        return fin;
-    }
-
-    public void setFin(Date fin) {
-        this.fin = fin;
     }
  //Opción para que no haga un bug
     @JsonBackReference
