@@ -27,6 +27,8 @@ public class Estudio {
     private String estudio;
     @NotNull
     private String porcentaje;
+    @NotNull
+    private String color;
     
      //relacion
     @ManyToOne
@@ -41,10 +43,19 @@ public class Estudio {
     public Estudio() {
     }
 
-    public Estudio(String estudio, String porcentaje, Persona persona) {
+    public Estudio(String estudio, String porcentaje, String color, Persona persona) {
         this.estudio = estudio;
         this.porcentaje = porcentaje;
         this.persona = persona;
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public int getId() {
